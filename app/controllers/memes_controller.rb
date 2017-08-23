@@ -20,7 +20,7 @@ class MemesController < ApplicationController
     @meme = Meme.find(params[:id])
     @meme.update!(meme_params)
 
-    render json: @meme
+    render json: @meme.to_json(:include => :comments)
   end
 
   def destroy
