@@ -3,6 +3,4 @@ Rails.application.routes.draw do
   resources :memes
   resources :comments
 
-  # match '*path' => 'home#index', via: :get
-
 end
